@@ -6,6 +6,7 @@ import java.util.HashSet;
 import org.eclipse.microprofile.jwt.Claims;
 import io.smallrye.jwt.build.Jwt;
 import jakarta.annotation.security.PermitAll;
+import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
@@ -15,6 +16,7 @@ import jakarta.ws.rs.core.MediaType;
 public class Users {
 
     @GET
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Path("/jwt")
     @PermitAll //metodos abertos que qualquer um pode tentar autenticar, criar o jwt
     @Produces(MediaType.TEXT_PLAIN)
