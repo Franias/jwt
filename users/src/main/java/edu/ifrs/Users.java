@@ -4,12 +4,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 import org.eclipse.microprofile.jwt.Claims;
-import org.eclipse.microprofile.rest.client.inject.RestClient;
-
 import io.smallrye.jwt.build.Jwt;
 import jakarta.annotation.security.PermitAll;
-import jakarta.annotation.security.RolesAllowed;
-import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
