@@ -16,9 +16,10 @@ import jakarta.ws.rs.core.MediaType;
 public class Users {
 
     @GET
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    
     @Path("/jwt")
     @PermitAll //metodos abertos que qualquer um pode tentar autenticar, criar o jwt
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
     public String generate() {//apenas o issuer seria uma constante
         return Jwt.issuer("http://localhost:8080") //issuer:emissor, quem é que emite o jwt | nao deve ficar vazio mas pode ser qualquer coisa
